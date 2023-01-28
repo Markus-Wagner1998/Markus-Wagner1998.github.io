@@ -1,0 +1,227 @@
+::selection {
+    background: rgb(235, 74, 59);
+    color: white;
+}
+
+::-moz-selection {
+    background: rgb(235, 74, 59);
+    color: white;
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 50px;
+    background-color: rgb(49, 49, 49);
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+table span {
+    display: block;
+}
+
+table td {
+    min-width: 120px;
+    padding: 10px 15px;
+}
+
+p span {
+    cursor: pointer;
+    cursor: hand;
+    color: rgb(235, 74, 59)
+}
+
+tr:nth-child(even) {
+    background-color: rgb(65, 65, 65);
+}
+
+a {
+    transition: color .1s ease-in-out;
+}
+
+a,
+a:visited {
+    color: rgb(235, 74, 59);
+}
+
+a:hover {
+    color: rgb(235, 74, 59);
+}
+
+h1,
+h2,
+p {
+    margin: 0;
+}
+
+p {
+    margin-top: 15px;
+}
+
+li {
+    list-style: none;
+    padding-left: 15px;
+    position: relative;
+}
+
+li::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: rgb(235, 74, 59);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    margin: 0 200px;
+}
+
+.section+.section {
+    margin-top: 50px;
+}
+
+.one-column {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 40px;
+}
+
+.profile-image-container {
+    margin: 0 auto;
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+
+.skill {
+    width: 31%;
+}
+
+.table-container {
+    border: 1px rgba(235, 74, 59, .5) solid;
+    border-radius: 5px;
+    box-shadow: 0 25px 25px -25px rgb(30, 30, 30);
+    margin-top: 15px;
+}
+
+.cv-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icon {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    stroke-width: 0;
+    stroke: white;
+    fill: white;
+    margin: 0 10px;
+}
+
+.orange {
+    color: rgb(235, 74, 59);
+}
+
+.collapsible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(235, 74, 59);
+    color: white;
+    cursor: pointer;
+    width: calc(100% - 30px);
+    height: 45px;
+    border: none;
+    outline: none;
+    padding: 0 15px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: rgb(189, 54, 42);
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
+    background-color: rgb(235, 74, 59);
+}
+
+.content {
+    padding: 0 15px;
+    display: none;
+    overflow: hidden;
+    background-color: rgb(41, 40, 40);
+    color: rgb(235, 74, 59);
+}
+
+.collapsible {
+    margin-top: 15px;
+}
+
+@media only screen and (min-width: 1680px) {
+    .section {
+        max-width: 1380px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .section {
+        margin: 0 140px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .section {
+        margin: 0 80px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .section {
+        margin: 0 30px;
+    }
+
+    .two-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 50%;
+    }
+
+}
