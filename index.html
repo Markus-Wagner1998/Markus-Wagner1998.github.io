@@ -32,7 +32,7 @@
     <div class="section">
         <div class="one-column">
             <div class="profile-long-description">
-                <h2 class="orange">Hi, I'm Markus</h2>
+                <h2 class="orange">Working Experience</h2>
                 <div class="collapsible">
                     <span>Senior IT Consultant / Technical Lead</span> <span id="expander-uni">+</span>
                 </div>
@@ -312,10 +312,10 @@
         coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
             var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
+            if (!content.style.maxHeight || content.style.maxHeight === "0px") {
+                content.style.maxHeight = "100%";
             } else {
-                content.style.display = "block";
+                content.style.maxHeight = "0";
             }
         });
     }

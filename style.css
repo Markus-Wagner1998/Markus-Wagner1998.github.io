@@ -181,10 +181,11 @@ li::before {
 
 .content {
     padding: 0 15px;
-    display: none;
     overflow: hidden;
     background-color: rgb(41, 40, 40);
     color: rgb(235, 74, 59);
+    max-height: 0px;
+    transition: max-height .5s ease-in-out;
 }
 
 .collapsible {
